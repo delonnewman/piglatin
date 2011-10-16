@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-# Description: Converts given English text into Pig Latin
+# ABSTRACT: Converts given English text into Pig Latin
 # Delon Newman <delon.newman@gmail.com> Copyright (C) 2007
 
 package PigLatin;
