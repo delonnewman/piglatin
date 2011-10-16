@@ -3,7 +3,7 @@ use warnings;
 # ABSTRACT: Converts given English text into Pig Latin
 # Delon Newman <delon.newman@gmail.com> Copyright (C) 2007
 
-package PigLatin;
+package App::PigLatin;
 use Exporter 'import';
 our @EXPORT_OK = qw(translate);
 

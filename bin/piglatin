@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use PigLatin qw(translate);
+use App::PigLatin qw(translate);
 
 $/="";
 my $text = <>;
