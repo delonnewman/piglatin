@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-# ABSTRACT: Converts given English text into Pig Latin
+# ABSTRACT: Converts English text into Pig Latin
 # Delon Newman <delon.newman@gmail.com> Copyright (C) 2007
 
 package App::PigLatin;
@@ -69,3 +69,15 @@ sub starts_with_consonant {
 }
 
 1;
+
+__END__
+
+=head1 SYNOPSIS
+
+	Piglatin::translate("some text") #=> "omesay extay"
+
+=head1 FUNCTIONS
+
+=head2 translate
+
+=head1 AUTHOR
