@@ -1,32 +1,36 @@
 #include <stdio.h>
+#include <regex.h>
 #include "piglatin.h"
 
-hash create_dictionary(char** words)
+string * parse_text(FILE* file)
 {
-	hash dict;
-	return dict;
-}
+	string words[100];
 
-char** parse_text(FILE* file)
-{
-	char** words;
-
-	char* word;
+	int   i = 0, j = 0;
+	char  c;
+	string word = "";
 	while ( (c = getc(file)) != EOF ) {
-		
+		switch (c) {
+		case ' ':
+			if ( sizeof(word) > 0 ) {
+				i = 0;
+				words[j] = word;
+				j++;
+			}
+			else puts("space");
+			break;
+		case '.', '!', '?', ',', '#', '(', ')', '+', '-':
+			/* ignore these to start */
+			break;
+		default:
+			if ( sizeof(word) > 0 ) printf("char: %c and word\n", c);
+			else {
+				word[i] = c;
+				i++;
+			}
+			break;
+		}
 	}
-
 
 	return words;
 }
-
-char** translate(FILE* file)
-{
-	char** trans;
-	char** words = parse_text(file);
-	hash   dict  = create_dictionary(words);
-
-	return trans;
-}
-
-

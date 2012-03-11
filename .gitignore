@@ -1,2 +1,4 @@
 *.sw*
 tmp/
+src/piglatin.o
+bin/piglatin

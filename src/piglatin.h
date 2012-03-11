@@ -1,21 +1,23 @@
-stuct key {
-	char[] name;
-	int*   value;
-};
+typedef char *string;
 
-struct hash {
-	key*   keys;
-	char** values;
+typedef struct {
+	char *name;
+	int  *value;
+} Key;
+
+typedef struct {
+	Key   *keys;
+	char **values;
 	int    count;
-};
+} Hash;
 
-hash   hash_new();
-bool   hash_add(hash h, char[] key, char[] value);
-char[] hash_get_value(hash h, char[] key);
-bool   hash_has_value(hash h, char[] key);
+Hash   hash_new();
+int    hash_add(hash, char*, char*);
+char  *hash_get_value(hash, char*);
+int    hash_has_value(hash, char*);
 
-char** translate(FILE* file);
-hash   create_dictionary(char** words);
-bool   starts_with_vowl(char* word);
-bool   starts_with_consonant(char* word);
-char** parse_text(FILE* file);
+char  **translate(FILE*);
+Hash    create_dictionary(char**);
+int     starts_with_vowl(char*);
+int     starts_with_consonant(char*);
+string *parse_text(FILE*);
