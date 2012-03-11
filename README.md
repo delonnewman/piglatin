@@ -12,6 +12,12 @@ SYNOPSIS
 
 	> cat sometext.txt | piglatin
 
+	
+DESCRIPTION
+===========
+Takes text from standard input and translates it into Pig Latin.
+(see http://en.wikipedia.org/wiki/Pig_Latin)
+
 AUTHOR
 ======
 
